@@ -1,0 +1,179 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1000px;
+}
+
+/* Línea de tiempo */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 4px;
+    height: 100%;
+    background: #ff7b00;
+    z-index: 1;
+}
+
+.timeline-event {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    z-index: 2;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -16px;
+    width: 12px;
+    height: 12px;
+    background: #ff7b00;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #f0f8ff;
+    z-index: 3;
+}
+
+.timeline-event h3 {
+    margin-top: 0;
+    color: #ff7b00;
+}
+
+.timeline-event p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.timeline-event button {
+    margin-top: 10px;
+    background-color: #ff7b00;
+    border-color: #ff7b00;
+}
+
+/* Modal */
+.modal-body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Carrusel */
+.carousel {
+    margin-top: 20px;
+}
+
+.carousel img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Acordeón */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-button {
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ff7b00;
+    background-color: #e9ecef;
+    border-color: #ff7b00;
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 15px;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.accordion-body ul li {
+    margin-bottom: 10px;
+}
+
+.accordion-body a {
+    color: #ff7b00;
+    text-decoration: none;
+}
+
+.accordion-body a:hover {
+    text-decoration: underline;
+}
+
+/* Video */
+.modal-body iframe {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes generales para modal */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #ff7b00;
+    color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-header .btn-close {
+    color: white;
+    opacity: 1;
+}
+
+.modal-header .btn-close:hover {
+    color: #ccc;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+    .modal-body iframe {
+        height: 200px;
+    }
+    .carousel img {
+        height: auto;
+    }
+}
